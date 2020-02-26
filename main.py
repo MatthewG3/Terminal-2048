@@ -178,6 +178,7 @@ class Game():
             for j in range(len(self.gameList[i])):
                 tempList[i].append(self.gameList[i][j])
         self.move()
+        self.randomizerWeightUpdate()
         if tempList != self.gameList:
             self.createNum()
         elif self.noMoreSpots() and self.gameOver:
